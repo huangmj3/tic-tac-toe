@@ -1,0 +1,58 @@
+/* 选择器，一条或多条说明 */
+/* id选择器：#paral   class选择器：.center  */
+/* html <h1>-<h6>表示标题，<p>表示段落 */
+/* <br>换行 <hr>分隔内容 */
+/* <div>定义文档块级区域，<span>组合行内元素，内联元素*/
+body {
+    font: 14px "Century Gothic", Futura, sans-serif;
+    margin: 20px;
+  }
+  /* ol(ordered list有序列表，unordered list无序列表) */
+  ol, ul {
+    padding-left: 30px;
+  }
+  /* CSS伪类，board-row元素之后插入新内容 */
+  .board-row:after {
+    /* 指定元素两侧不能出现浮动元素 */
+    clear: both;
+    content: "";
+    /* 此元素会作为块级表格来显示（类似<table>），表格前后带有换行符 */
+    display: table;  
+  }
+  
+  .status {
+    margin-bottom: 10px;
+  }
+  
+  .square {
+    background: #fff;
+    border: 1px solid #999;
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 34px;
+    height: 34px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 34px;
+  }
+  /* 聚焦时 */
+  .square:focus {
+    outline: none;
+  }
+  
+  .kbd-navigation .square:focus {
+    background: #ddd;
+  }
+  
+  .game {
+    display: flex;
+    flex-direction: row;
+  }
+  /* className中定义的game-info */
+  .game-info {
+    margin-left: 20px;
+  }
+  
